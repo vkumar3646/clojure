@@ -12,3 +12,9 @@
   
   (def dec9 (dec-maker 9))
   (dec9 10)
+
+;4. Write a function, mapset, that works like map except the return value is a set:
+;(mapset inc [1 1 2 2])
+;; => #{2 3}
+(defn mapset [f l]
+  (into #{} (map f l)))
